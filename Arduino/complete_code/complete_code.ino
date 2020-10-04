@@ -265,7 +265,7 @@ void loop(void)
       lastStateMaskOn = false;
     }
   } else {
-    digitalWrite(RED_OUT_LED,HIGH);
+    digitalWrite(RED_OUT_LED, HIGH);
     lastStateMaskOn = false;
   }
   delay(100);
