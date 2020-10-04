@@ -259,12 +259,13 @@ void loop(void)
         play_rtttl(jeopardy);
         digitalWrite(MOTOR, LOW);
         hasDispensed = true;
-      } else if (digitalRead(IR_SENSOR)) {
+      } else if (!digitalRead(IR_SENSOR)) {
         play_rtttl(jeopardy);
       }
       lastStateMaskOn = false;
     }
   } else {
+    digitalWrite(RED_OUT_LED,HIGH);
     lastStateMaskOn = false;
   }
   delay(100);
