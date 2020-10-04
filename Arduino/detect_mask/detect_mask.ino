@@ -48,7 +48,7 @@ void loop()
   if (pixy.ccc.numBlocks)
   {
     Block block = pixy.ccc.blocks[0];
-    if (block.m_width * block.m_height > 2250) {
+    if (block.m_width * block.m_height > 2250 && block.m_age > 50) {
       digitalWrite(RED_LED, HIGH);
     } else {
       digitalWrite(RED_LED, LOW);
